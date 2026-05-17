@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import './styles/Header.css';
+// Import the logo directly
+import logo from '/src/assets/images/logo.PNG';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -62,7 +64,7 @@ const Header = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <div className="logo" onClick={() => scrollToSection('home')}>
-          <img src="/src/assets/images/logo.PNG" alt="PKREX Logo" className="logo-image" />
+          <img src={logo} alt="PKREX Logo" className="logo-image" />
         </div>
         
         <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
@@ -88,12 +90,12 @@ const Header = () => {
             </li>
           </ul>
           
-  
-            {/* FAQ Button */}
-            <button className="nav-faq" onClick={scrollToFAQ}>
-              <span className="faq-icon">?</span>
-              FAQ
-            </button>
+          {/* FAQ Button */}
+          <button className="nav-faq" onClick={scrollToFAQ}>
+            <span className="faq-icon">?</span>
+            FAQ
+          </button>
+          
           <div className="nav-actions">
             {/* Professional Theme Toggle */}
             <button 
@@ -109,7 +111,6 @@ const Header = () => {
                 <span className="toggle-label-dark">Dark</span>
               </span>
             </button>
-          
           </div>
         </nav>
       </div>

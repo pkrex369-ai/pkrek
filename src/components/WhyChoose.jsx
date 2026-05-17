@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './styles/WhyChoose.css';
+// Import the image directly
+import whyChooseImage from '/src/assets/images/whychoosee.jpeg';
 
 const WhyChoose = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -113,7 +115,7 @@ const WhyChoose = () => {
           <div className="image-side">
             <div className="image-container">
               <img 
-                src="/src/assets/images/whychoosee.jpeg" 
+                src={whyChooseImage} 
                 alt="Why Choose PKREX" 
                 className="why-image"
               />

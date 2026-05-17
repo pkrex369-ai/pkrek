@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaLinkedin, FaInstagram, FaFacebook, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import './styles/Footer.css';
+// Import the logo directly
+import logo from '/src/assets/images/logo.PNG';
 
 const Footer = () => {
   const scrollToSection = (sectionId) => {
@@ -15,7 +17,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-about">
-            <img src="/src/assets/images/logo.PNG" alt="PKREX Logo" className="footer-logo" />
+            <img src={logo} alt="PKREX Logo" className="footer-logo" />
             <p>Dedicated Non-Voice BPO partner for secure backend operations across India.</p>
             <div className="social-links">
               <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>

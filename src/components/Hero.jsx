@@ -2,13 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { FaCertificate, FaShieldAlt } from 'react-icons/fa';
 import './styles/Hero.css';
 
+// Import images directly
+import HeroImage from '/src/assets/images/Hero.jpeg';
+import HeroImage1 from '/src/assets/images/Hero1.jpeg';
+
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   
   const heroSlides = [
     {
-      image: '/src/assets/images/Hero.jpeg',
+      image: HeroImage,
       badge: "INDIA'S TRUSTED NON-VOICE BPO",
       title: "Secure Non-Voice BPO",
       highlight: "Solutions For Modern Enterprises",
@@ -20,7 +24,7 @@ const Hero = () => {
       ]
     },
     {
-      image: '/src/assets/images/Hero1.jpeg',
+      image: HeroImage1,
       badge: "ENTERPRISE-GRADE BACKEND SOLUTIONS",
       title: "Scalable Operations",
       highlight: "For Growing Businesses Worldwide",
